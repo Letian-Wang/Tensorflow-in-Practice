@@ -1,0 +1,9 @@
+tuning while training:
+    learning rate: naive train with learningRateScheduler
+    window_size: seasonality
+    split_time: ratio of training and testing
+    neuron number: experiment
+    network: CNN, DNN, RNN
+    generalization: dropout, regularizer
+    epoch: longer, fitter
+    batch_size: need to be tried (should be big enough to avoid further noise, but not too big)

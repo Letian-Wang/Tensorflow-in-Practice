@@ -1,0 +1,33 @@
+1. data synthesis:
+    trend: monotuneous
+    seasonality: repeatation
+    noise
+    autocorrelation: data that follows a predictable shape, even if the scale is different
+
+2. temrs
+    univariate time series: hour by hour temperature
+    multivariate time series: hour by hour weather
+
+    imputed data: A projection of unknown (usually past or missing) data
+    non-stationary: one that has a disruptive event breaking trend and seasonality
+    naive prediction: new value equals to last value
+     
+    moving average: average of moving window (eliminate noise) (trainling/centered window)
+    differencing: remove trend and seasonality (Series(t) - Series(t-T)), need to restore
+
+3. patition:
+    fixed partitioning: training period,    validation period,  test period
+        1. fine-tuning on training data and validation data
+        2. train on training data and validation data
+        3. test on test data
+
+    roll-forward partitioning
+
+
+4.Metrics:
+    errors = forecasts - actual
+    mse = np.square(errors).mean()
+    rmse = np.sqrt(mse)
+    mae = np.abs(erros).mean()
+    keras.metrics.mean_absolute_error(x_valid, naive_forcast).numpy()
+    mape = np.abs(errors / x_valid).mean()
